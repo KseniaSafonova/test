@@ -130,6 +130,89 @@ li:nth-child(1) {
   margin-top: 33px;
 }
 
+.popupBlock {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popupBlock:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__content {
+  background-color: #A6C9FF;
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.popup__content p {
+  color: #FFFF;
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.popup__content,
+.close__button {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #FFFF;
+}
+
+.popup__close {
+  height: 39px;
+  width: 43px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: -330px;
+  margin-left: -60px;
+  background-color: #497957;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main {
   background-color: #A6C9FF;
   color: #FFFF;
@@ -178,9 +261,13 @@ li:nth-child(1) {
   width: 262px;
   height: 58px;
   border-radius: 25px;
-  color: #FFFF;
   border: 1px solid #FF4B4B;
+}
+
+.button__link {
   font-family: 'Roboto';
+  color: #FFFF;
+  text-decoration: none;
   font-size: 24px;
   font-weight: 400;
 }
