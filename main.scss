@@ -9,19 +9,56 @@ $textColor: #FFFF;
     border-radius: 0px;
     font-family: 'Roboto';
     color: $textColor;
+    display: flex;
+    align-items: center;
+}
+
+.header div {
+    margin-left: 60px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.header div:nth-child(1) {
+    margin-left: 155.36px;
+    text-decoration: underline;
 }
 
 .main {
     background-color: #A6C9FF;
     color: $textColor;
     width: 1170px;
-    height: 1320px;
+    // height: 1320px;
     font-family: 'Roboto';
     text-align: center;
 }
 
+.main__topBlock {
+    height: 40px;
+    background-color: #A6C9FF;
+}
+
 .h1 {
     background-color: #7029CB;
+    display: flex;
+    align-items: center;
+}
+
+.h1 img:nth-child(1) {
+    margin-left: 50.75px;
+}
+
+.h1 h1 {
+    margin-left: 220.19px;
+    width: 158px;
+}
+
+.h1 button {
+    margin-left: 32px;
+}
+
+.h1 img {
+    margin-left: 321.68px;
 }
 
 .h1__button,
@@ -32,6 +69,16 @@ $textColor: #FFFF;
     border-radius: 25px;
     color: $textColor;
     border: 1px solid $colorButton;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.main__h2-1 {
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main__greenBlocks {
@@ -56,9 +103,18 @@ $textColor: #FFFF;
     grid-row: 1/2;
 }
 
+.main__block1 p::before {
+    content: "1";
+}
+
+
 .main__block2 {
     grid-column: 2/4;
     grid-row: 1/2;
+}
+
+.main__block2 p::before {
+    content: "2";
 }
 
 .main__block3 {
@@ -66,7 +122,20 @@ $textColor: #FFFF;
     grid-row: 2/3;
 }
 
-.main__block4 {}
+.main__block3 p::before {
+    content: "3";
+}
+
+.main__block4 p::before {
+    content: "4";
+}
+
+.main__h2-2 {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .main__bottomBlock {
     background-color: #D4FF5A;
@@ -88,10 +157,36 @@ $textColor: #FFFF;
     background: linear-gradient(0deg, #497957, #497957);
 }
 
+.bottomBlock-block:nth-child(1) {
+    box-shadow: 2px 5px 10px 0px #497957;
+}
+
+.main__textUtp {
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 40px;
+    height: 192px;
+}
+
+.main__textUtp button {
+    margin-top: 9px;
+}
+
 .footer {
     background-color: #D87FF6;
     width: 1170px;
     height: 100px;
     color: $textColor;
     font-family: 'Roboto';
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-left: 29.5px;
+}
+
+.footer div {
+    margin-left: 175px;
+    font-size: 28px;
+    font-weight: 500;
 }
