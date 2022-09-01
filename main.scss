@@ -1,6 +1,11 @@
 $colorButton: #FF4B4B;
 $textColor: #FFFF;
 
+.container {
+    display: flex;
+    justify-content: center;
+    width: 1920px;
+}
 
 .header {
     background-color: #B47FF6;
@@ -8,27 +13,116 @@ $textColor: #FFFF;
     height: 148px;
     border-radius: 0px;
     font-family: 'Roboto';
-    color: $textColor;
     display: flex;
     align-items: center;
 }
 
-.header div {
+.header__item {
     margin-left: 60px;
+    text-decoration: none;
+    color: $textColor;
+    font-family: 'Roboto';
     font-size: 28px;
     font-weight: 500;
 }
 
-.header div:nth-child(1) {
+.header__item:nth-child(1) {
     margin-left: 155.36px;
     text-decoration: underline;
+}
+
+#hamburger {
+    opacity: 0;
+}
+
+.header__button {
+    display: flex;
+    align-items: center;
+    // position: fixed;
+    position: absolute;
+    top: 66px;
+    left: 1401px;
+    width: 43.37px;
+    height: 26px;
+    z-index: 1;
+}
+
+.header__button>span,
+.header__button>span::before,
+.header__button>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $textColor;
+}
+
+.header__button>span::before {
+    content: '';
+    top: -8px;
+}
+
+.header__button>span::after {
+    content: '';
+    top: 8px;
+}
+
+.header__menu {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 411px;
+    margin-top: -85px;
+    margin-left: 375px;
+    background-color: #A6C9FF;
+}
+
+.menu__item {
+    color: $textColor;
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#hamburger:checked~.header__button>span {
+    transform: rotate(25deg);
+}
+
+#hamburger:checked~.header__button>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#hamburger:checked~.header__button>span::after {
+    top: 0;
+    transform: rotate(130deg);
+}
+
+#hamburger:checked~.header__menu {
+    visibility: visible;
+    left: 0;
+}
+
+.header__menu a {
+    text-decoration: none;
+    color: $textColor;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 39px;
+    margin-left: 64.5px;
+}
+
+li:nth-child(1) {
+    margin-top: 33px;
 }
 
 .main {
     background-color: #A6C9FF;
     color: $textColor;
     width: 1170px;
-    // height: 1320px;
     font-family: 'Roboto';
     text-align: center;
 }
@@ -40,6 +134,7 @@ $textColor: #FFFF;
 
 .h1 {
     background-color: #7029CB;
+    height: 176px;
     display: flex;
     align-items: center;
 }
@@ -62,7 +157,8 @@ $textColor: #FFFF;
 }
 
 .h1__button,
-.main__button {
+.main__button,
+.menu__button {
     background-color: $colorButton;
     width: 262px;
     height: 58px;
@@ -72,6 +168,10 @@ $textColor: #FFFF;
     font-family: 'Roboto';
     font-size: 24px;
     font-weight: 400;
+}
+
+.menu__button {
+    margin-top: 55px;
 }
 
 .main__h2-1 {
@@ -106,7 +206,6 @@ $textColor: #FFFF;
 .main__block1 p::before {
     content: "1";
 }
-
 
 .main__block2 {
     grid-column: 2/4;
@@ -146,12 +245,14 @@ $textColor: #FFFF;
     box-sizing: border-box;
     margin-left: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    column-gap: 20px;
 }
 
 .bottomBlock-block {
-    height: 198px;
-    width: 198px;
+    height: 0px;
+    width: 100%;
+    padding-top: 100%;
     border-radius: 35px;
     border: 2px solid #00FF4A;
     background: linear-gradient(0deg, #497957, #497957);
@@ -165,8 +266,9 @@ $textColor: #FFFF;
     font-family: 'Roboto';
     font-size: 28px;
     font-weight: 500;
-    margin-top: 40px;
+    padding-top: 40px;
     height: 192px;
+    box-sizing: border-box;
 }
 
 .main__textUtp button {
