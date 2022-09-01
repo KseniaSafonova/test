@@ -1,0 +1,97 @@
+$colorButton: #FF4B4B;
+$textColor: #FFFF;
+
+
+.header {
+    background-color: #B47FF6;
+    width: 1170px;
+    height: 148px;
+    border-radius: 0px;
+    font-family: 'Roboto';
+    color: $textColor;
+}
+
+.main {
+    background-color: #A6C9FF;
+    color: $textColor;
+    width: 1170px;
+    height: 1320px;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.h1 {
+    background-color: #7029CB;
+}
+
+.h1__button,
+.main__button {
+    background-color: $colorButton;
+    width: 262px;
+    height: 58px;
+    border-radius: 25px;
+    color: $textColor;
+    border: 1px solid $colorButton;
+}
+
+.main__greenBlocks {
+    display: grid;
+    grid-template-rows: 198px 198px;
+    grid-template-columns: 392px 589px 162px;
+    column-gap: 13px;
+    row-gap: 13px;
+}
+
+.main__greenBlocks div {
+    background-color: #3ADE4B;
+    font-size: 53px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__block1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.main__block2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.main__block3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.main__block4 {}
+
+.main__bottomBlock {
+    background-color: #D4FF5A;
+    height: 248px;
+    width: 1120px;
+    border-radius: 30px;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-left: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.bottomBlock-block {
+    height: 198px;
+    width: 198px;
+    border-radius: 35px;
+    border: 2px solid #00FF4A;
+    background: linear-gradient(0deg, #497957, #497957);
+}
+
+.footer {
+    background-color: #D87FF6;
+    width: 1170px;
+    height: 100px;
+    color: $textColor;
+    font-family: 'Roboto';
+}
