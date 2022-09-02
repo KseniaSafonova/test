@@ -371,21 +371,14 @@ li:nth-child(1) {
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        width: 100%;
-    }
-}
+@media (min-width: 768px) and (max-width: 1024px) {}
 
 @media (min-width: 375px) and (max-width: 767px) {
 
     .container {
-        width: 100%;
-        // display: block;
-    }
-
-    .header {
-        width: 100%;
+        width: 500px;
+        display: flex;
+        justify-content: start;
     }
 
     .header__item {
@@ -409,44 +402,30 @@ li:nth-child(1) {
     }
 
     .popupBlock {
-        display: none;
         // position: fixed;
-        // top: 0;
-        // bottom: 0;
-        // left: 0;
-        // right: 0;
-        // background: rgba(0, 0, 0, 0.3);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 10px;
+        background: rgba(0, 0, 0, 0.3);
         // transition: opacity 500ms;
-        // visibility: hidden;
+        visibility: hidden;
         // opacity: 0;
-        // // display: flex;
-        // // align-items: center;
-        // // justify-content: center;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
     }
 
     .popup__content {
         background-color: #A6C9FF;
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
     }
-
-    // .popup__close {
-    //     height: 39px;
-    //     width: 43px;
-    //     border-radius: 5px;
-    //     padding: 8px 15px;
-    //     margin-top: -330px;
-    //     margin-left: -60px;
-    //     background-color: #497957;
-    //     box-sizing: border-box;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
 
     .h1 img:nth-child(1) {
         margin-left: 10px;
@@ -477,11 +456,11 @@ li:nth-child(1) {
     }
 
     .main {
-        width: 100%;
+        width: 90%;
     }
 
     .main__topBlock {
-        width: 100%;
+        width: 90%;
     }
 
     .main__greenBlocks {
@@ -512,7 +491,7 @@ li:nth-child(1) {
     }
 
     .main__bottomBlock {
-        width: 100%;
+        width: 90%;
         height: 50%;
         column-gap: 5px;
         padding: 10px;
@@ -521,7 +500,7 @@ li:nth-child(1) {
     }
 
     .footer {
-        width: 100%;
+        width: 90%;
     }
 
     .footer div {
